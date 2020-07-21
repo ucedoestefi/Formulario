@@ -1,0 +1,453 @@
+/*Se le sacan todos los margenes a la pagina en gral*/
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 12px;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+
+/*CSS Header*/
+
+.contenedor-header {
+    width: 100%;
+}
+
+.contenedor-principio h1 {
+    width: 100%;
+    font-size: 3em;
+    background-color: #2471A3;
+    color: white;
+}
+
+.contenedor-imagen {
+    width: 100%;
+    height: 40px;
+}
+
+.contenedor-imagen img {
+    width: 100%;
+    height: 40px;
+}
+
+.contenedor-navegacion {
+    width: 100%;
+    background: #A3E4D7;
+}
+
+.navegacion {
+    width: 100%;
+    padding: 2px
+}
+
+.menu>ul {
+    /*Le saca el diseño a la lista*/
+    list-style: none;
+    padding: 0;
+    /*Permite que el elemente mantenga el mismo tamaño 
+    aunque se achique o se agrande*/
+    display: flex;
+}
+
+.menu>li {
+    position: relative;
+    /*Permite ponerlo en la misma linea*/
+    display: inline-block;
+}
+
+.menu>li>a {
+    /*Genera un cuadro de elementos de bloque*/
+    display: block;
+    padding: 15px 2px;
+    color: #353535;
+    font-family: 'Open sans';
+    text-decoration: none;
+    font-size: 1.4em;
+    margin-right: 2px;
+}
+
+.menu li a:hover {
+    color: rgb(126, 149, 163);
+    /*Lo que tarda en aparecer*/
+    transition: all .3s;
+}
+
+
+/* CSS Submenu*/
+
+.submenu {
+    position: absolute;
+    background: #A3E4D7;
+    width: 180%;
+    list-style: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1.5s;
+}
+
+.submenu li a {
+    display: block;
+    padding: 15px;
+    color: black;
+    font-family: 'Open sans';
+    text-decoration: none;
+}
+
+.menu li:hover .submenu {
+    visibility: visible;
+    opacity: 1;
+}
+
+.header-title {
+    width: 100%;
+    font-weight: normal;
+    font-family: sans-serif;
+    color: #A3E4D7;
+    text-align: center;
+    padding: 14px 0;
+    margin: auto;
+    font-size: 4em;
+}
+
+.header-title span {
+    color: black;
+    text-align: center;
+    font-size: 0.8em;
+}
+
+
+/*CSS Formulario*/
+
+.contenedor {
+    width: 100%;
+    padding: 5px -10x;
+    margin-top: 20px;
+    padding-bottom: 50px;
+    border-radius: 4px;
+}
+
+.contenedor-fieldset {
+    width: 100%;
+}
+
+.contenedor-fieldset fieldset {
+    background: #F7F9F9;
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+    margin: auto;
+    width: 80%;
+    padding: 10px;
+}
+
+fieldset:hover {
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
+}
+
+legend {
+    margin-left: 10px;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.contenedor-input {
+    width: 300px;
+}
+
+.form-input,
+.form-textarea {
+    background: rgba(192, 189, 189, 0.7);
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #A3E4D7;
+    width: 95%;
+    padding: 10px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+    border-radius: 2px;
+    font-size: 14px;
+    color: black;
+    font-family: 'Open sans';
+}
+
+.form-textarea {
+    resize: vertical;
+    max-height: 150px;
+    min-height: 80px;
+}
+
+.contenedor-button {
+    width: 40%;
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
+
+.btn-submit {
+    width: 100%;
+    text-align: center;
+    font-family: 'Open sans';
+    background: #A3E4D7;
+    font-size: 14px;
+    border: none;
+    color: black;
+    padding: 5px 0;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.btn-submit:hover {
+    background: rgb(126, 149, 163);
+}
+
+
+/*CSS Footer*/
+
+footer {
+    width: 100%;
+    background: #A3E4D7;
+    padding: 2px;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    /*direccion horizontalh hacia la derecha*/
+    flex-direction: row;
+    /*factor de crecimiento de un elemento*/
+    flex-grow: 1;
+}
+
+.contenedor-redes {
+    padding: 2px;
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    /*Distribuye entre y alrededor del item*/
+    justify-content: space-evenly;
+    margin-top: 5px;
+}
+
+.contenedor-facebook {
+    margin-right: 2px;
+    margin-bottom: 5px;
+    margin-top: 2px;
+}
+
+.contenedor-instagram {
+    margin-right: 2px;
+    margin-bottom: 5px;
+    margin-top: 2px;
+}
+
+.contenedor-twitter {
+    margin-right: 2px;
+    margin-bottom: 5px;
+    margin-top: 2px;
+}
+
+.contenedor-ifts {
+    font-size: 1em;
+    width: 60%;
+    padding-left: 5px;
+    margin-top: 10px;
+}
+
+
+/* monitor de PC escritorio o laptop*/
+
+@media screen and (min-width: 1024px) {
+    .contenedor-header {
+        width: 100%;
+    }
+    .contenedor-imagen {
+        width: 100%;
+    }
+    .contenedor-imagen img {
+        width: 100%;
+        height: 45px;
+    }
+    .contenedor-navegacion {
+        width: 100%;
+        background: #A3E4D7;
+    }
+    .navegacion {
+        width: 100%;
+        padding: 2px
+    }
+    .menu>li>a {
+        padding: 15px 5px;
+    }
+    .header-title {
+        width: 100%;
+        font-weight: normal;
+        font-family: sans-serif;
+        color: #A3E4D7;
+        text-align: center;
+        padding: 14px 0;
+        margin: auto;
+        margin-top: 50px;
+    }
+    .header-title span {
+        color: black;
+    }
+    .contenedor {
+        width: 100%;
+        padding: 5px -10x;
+        margin: 2px;
+        padding-bottom: 50px;
+        border-radius: 4px;
+    }
+    .contenedor-fieldset {
+        width: 50%;
+        margin: auto;
+    }
+    .contenedor-input {
+        width: 97%;
+        height: 70px;
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+    .contenedor-button {
+        margin-top: 20px;
+    }
+    footer {
+        width: 100%;
+        background: #A3E4D7;
+        padding: 2px;
+        position: fixed;
+        bottom: 0;
+        display: flex;
+        flex-direction: row;
+        flex-grow: 1;
+    }
+    .contenedor-redes {
+        padding: 2px;
+        width: 40%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        margin-right: -5px;
+    }
+    .contenedor-ifts {
+        font-size: 1em;
+        width: 60%;
+        padding-left: 5px;
+        margin-top: 10px;
+    }
+}
+
+
+/*COMIENZO DE MEDIA QUERIES PARA PANTALLAS ENTRE 768PX Y 1024PX
+
+para tablets*/
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .contenedor-header {
+        width: 100%;
+    }
+    .contenedor-imagen img {
+        width: 100%;
+        height: 45px;
+    }
+    .contenedor-navegacion {
+        width: 100%;
+    }
+    .navegacion {
+        width: 100%;
+        padding: 2px;
+    }
+    .menu>li>a {
+        padding: 15px 5px;
+    }
+    .header-title {
+        width: 100%;
+        font-weight: normal;
+        font-family: sans-serif;
+        color: #A3E4D7;
+        text-align: center;
+        padding: 14px 0;
+        margin: auto;
+    }
+    .header-title span {
+        color: black;
+    }
+    .contenedor {
+        width: 100%;
+        padding: 5px -10x;
+        margin-top: 2px;
+        padding-bottom: 50px;
+        border-radius: 4px;
+    }
+    .contenedor-fieldset {
+        width: 50%;
+        margin: auto;
+    }
+    .contenedor-input {
+        width: 97%;
+        height: 70px;
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+    .contenedor-button {
+        margin-top: 20px;
+    }
+    footer {
+        width: 100%;
+        background: #A3E4D7;
+        padding: 2px;
+        position: fixed;
+        bottom: 0;
+        display: flex;
+        flex-direction: row;
+        flex-grow: 1;
+    }
+    .contenedor-redes {
+        padding: 2px;
+        width: 40%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .contenedor-ifts {
+        font-size: 1em;
+        width: 60%;
+        padding-left: 5px;
+        margin-top: 10px;
+    }
+}
+
+
+/*COMIENZO DE MEDIA QUERIES PARA PANTALLAS ENTRE 768PX Y 1024PX EN MODO LANDSCAPE
+para tablet en modo landscape*/
+
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .contenedor-header {
+        width: 1000px;
+        margin: 5px auto 2px 10px;
+    }
+    .contenedor-imagen img {
+        width: 750x;
+        margin: 5px auto 2px 110px;
+    }
+    .contenedor-redes {
+        padding: 2px;
+        width: 40%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        margin-right: -5px;
+    }
+    .contenedor-facebook {
+        margin-right: -10px;
+        margin-bottom: 5px;
+        margin-top: 2px;
+    }
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" media="screen" href="./estilo.css" />
+    <title>Formulario</title>
+</head>
+
+<body>
+    <header class="contenedor-header">
+        <div class="contenedor-principio">
+            <h1>IFTS 16</h1>
+        </div>
+
+        <!--Comienzo del navegador-->
+        <div class="contenedor-navegacion">
+            <nav class="navegacion">
+                <ul class="menu">
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Nosotros</a></li>
+                    <li><a href="#">Servicios</a>
+                        <ul class="submenu">
+                            <li><a href="#">Servicio #1</a></li>
+                            <li><a href="#">Servicio #2</a></li>
+                            <li><a href="#">Servicio #3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <h1 class="header-title">C<span>ontacto</span></h1>
+
+    </header>
+
+    <!--Comienzo del formulario-->
+    <section class="contenedor">
+        <form action="enviar.php" method="post" enctype="multipart/form-data" class="contenedor-fieldset">
+            <fieldset>
+                <legend>Complete los datos</legend>
+
+                <div class="contenedor-input">
+                    <input class="form-input" placeholder="Nombre" name="nombre" type="text" />
+                </div>
+
+                <div class="contenedor-input">
+                    <input class="form-input" placeholder="Apellido" name="apellido" type="text" />
+                </div>
+
+                <div class="contenedor-input">
+                    <input class="form-input" placeholder="Correo" name="correo" type="text" />
+                </div>
+
+                <div class="contenedor-input">
+                    <input class="form-input" placeholder="Asunto" name="asunto" type="text" />
+                </div>
+
+                <div class="contenedor-input">
+                    <input class="form-input" name="archivo" type="file" />
+                </div>
+                <div class="contenedor-input">
+                    <textarea name="mensaje" placeholder="Escriba su Mensaje aqui" class="form-textarea"></textarea>
+                </div>
+
+               
+                    
+                <div class="contenedor-button">
+                    <input type="submit" value="Enviar Mensaje" class="btn-submit" id="btnSend">
+                </div>
+
+            </fieldset>
+        </form>
+        
+    </section>
+
+    <!--Cominezo del Footer-->
+    <footer>
+        <div class="contenedor-ifts">
+            <p>IFTS 16&trade;. Todos los derechos reservados.</p>
+        </div>
+        <div class="contenedor-redes">
+            <div class="contenedor-facebook">
+                <a href="https://www.facebook.com/"><img src="imagen/facebook.png" width="25" height="25"></a>
+            </div>
+
+            <div class="contenedor-instagram">
+                <a href="https://www.instagram.com/"><img src="imagen/instagram.png" width="25" height="25"></a>
+            </div>
+
+            <div class="contenedor-twitter">
+                <a href="https://www.twitter.com/"><img src="imagen/twitter.png" width="25" height="25"></a>
+            </div>
+        </div>
+    </footer>
+
+    </div>
+</body>
+
+</html>
